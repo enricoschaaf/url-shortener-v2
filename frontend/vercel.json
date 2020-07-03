@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/create",
+      "methods": ["POST"],
+      "dest": "https://7hpzxe39be.execute-api.eu-central-1.amazonaws.com/create"
+    },
+    {
+      "src": "/(.*)",
+      "methods": ["GET"],
+      "headers": {
+        "cache-control": "immutable"
+      },
+      "dest": "https://7hpzxe39be.execute-api.eu-central-1.amazonaws.com/$1"
+    }
+  ]
+}
